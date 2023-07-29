@@ -1,9 +1,13 @@
 // Refer for copy function: https://stackoverflow.com/questions/23048550/how-to-copy-a-divs-content-to-clipboard-without-flash/38672314#38672314
 // Refer: Enabled enabled dom.events.testing.asyncClipboard in Firefox Browser : https://stackoverflow.com/questions/67440036/navigator-clipboard-readtext-is-not-working-in-firefox 
 // Refer: Paste Clipboard code: https://www.youtube.com/watch?v=X4MZJmxwHqE
+// Refer: Remove Non ASCII Character : https://stackoverflow.com/questions/20856197/remove-non-ascii-character-in-string
+
 
 const substitutions = {
-
+	"उदुगोक् आ": "ᱩᱫᱩᱜᱚᱜᱼᱟ",
+	"आ़च् किर": "ᱟᱹᱛᱠᱤᱨ",
+	"मेसाक् आ": "ᱢᱮᱥᱟᱜᱼᱟ",
 	"ओनोल": "ᱚᱱᱚᱞ",
 	"चेदाक्": "ᱪᱮᱫᱟᱜ",
 	"ओल": "ᱚᱞ",
@@ -148,7 +152,8 @@ const substitutions = {
 	"ॶ": "ᱩ",
 	"ॷ": "ᱩ",
 	"\\.": "᱾",
-
+	"\u{0022}": "\u{201D}",
+	"\u{003C}xml": "\u{003C}",
 };
 
 
